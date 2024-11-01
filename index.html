@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sujan Dahal - CV</title>
+
+    <!-- Embedded CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .cv-container {
+            background: #ffffff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .cv-container:hover {
+            transform: scale(1.02);
+        }
+
+        .header {
+            background: #4a148c;
+            color: white;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-bottom: 3px solid #6a1b9a;
+        }
+
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border: 3px solid #ffffff;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .header-text h1 {
+            font-size: 36px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .header-text h2 {
+            font-size: 20px;
+            font-weight: 300;
+            color: #e1bee7;
+        }
+
+        .contact-info, .skills-list, .language-list {
+            display: grid;
+            gap: 20px;
+        }
+
+        .contact-info {
+            grid-template-columns: repeat(2, 1fr);
+            margin-bottom: 30px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            padding: 0 30px;
+        }
+
+        .section-title {
+            color: #4a148c;
+            font-size: 22px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #4a148c;
+            padding-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .skills-list, .language-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .skills-list li, .language-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .skills-list li::before, .language-list li::before {
+            content: '✓';
+            color: #4a148c;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #4a148c;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #6a1b9a;
+            transform: scale(1.05);
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: #333;
+            color: #f5f5f5;
+        }
+
+        body.dark-mode .cv-container {
+            background-color: #444;
+        }
+
+        body.dark-mode .header {
+            background-color: #333;
+            border-bottom-color: #6a1b9a;
+        }
+
+        body.dark-mode .btn {
+            background-color: #6a1b9a;
+            color: #f5f5f5;
+        }
+
+        @media (max-width: 600px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .skills-list, .contact-info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <header class="header">
+            <div class="profile-image">
+                <img src="path/to/your/image.jpg" alt="Sujan Dahal">
+            </div>
+            <div class="header-text">
+                <h1>SUJAN DAHAL</h1>
+                <h2>ACCOUNTANT & WEB DEVELOPER</h2>
+            </div>
+        </header>
+
+        <main class="content">
+            <div class="contact-info">
+                <div>
+                    <p>📧 <a href="mailto:sujan992@gmail.com">sujan992@gmail.com</a></p>
+                    <p>📱 070-9143-7393</p>
+                </div>
+                <div>
+                    <p>📍 615-0081 Kyoto, Japan</p>
+                    <p>Kuyamanouchi Yorochou 8-20</p>
+                    <p>Puroraito 202</p>
+                </div>
+            </div>
+
+            <section class="section">
+                <h2 class="section-title">PROFILE</h2>
+                <p>Business Administration and Web System Development student. Responsible and organized, ready for the first work experience.</p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">EDUCATION</h2>
+                <div class="education-item">
+                    <h3>MASTER'S DEGREE IN FINANCE</h3>
+                    <p>Tribhuvan University, Nepal</p>
+                    <p>Major: Finance</p>
+                </div>
+                <div class="education-item">
+                    <h3>MASTER'S IN TECHNOLOGY</h3>
+                    <p>The Kyoto College of Graduate Studies for Informatics</p>
+                    <p>Major: Web Business Technology Program (2023-2025)</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">SKILLS</h2>
+                <ul class="skills-list">
+                    <li>Accounting</li>
+                    <li>HTML & CSS</li>
+                    <li>Design Thinking</li>
+                    <li>Problem-Solving</li>
+                    <li>Computer Literacy</li>
+                    <li>Translation</li>
+                    <li>Strong Communication</li>
+                    <li>Microsoft Word</li>
+                    <li>Basic PowerPoint</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">LANGUAGES</h2>
+                <ul class="language-list">
+                    <li>English - Fluent</li>
+                    <li>Spanish - Intermediate</li>
+                    <li>Japanese - Basic</li>
+                    <li>Nepali - Native</li>
+                    <li>Turkish - Basic</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">VOLUNTEER EXPERIENCE</h2>
+                <div class="volunteer-item">
+                    <h3>Rural Development Center</h3>
+                    <p>Participated in data collection, data entry, and translation tasks.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <button id="toggle-theme-btn" class="btn">Toggle Dark Mode</button>
+
+    <!-- Embedded JavaScript -->
+    <script>
+        // Toggle dark mode
+        document.getElementById('toggle-theme-btn').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+</html>
